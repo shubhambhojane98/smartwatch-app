@@ -15,12 +15,19 @@ const Navbar = () => {
         <Link href="/">
           <li className=" text-white">Home</li>
         </Link>
-        <li className="pl-6 text-white">Products</li>
-        <li className="pl-6 text-white">About</li>
-        <li className="pl-6 text-white">Contact</li>
+        <Link href="/products">
+          <li className="pl-6 text-white">Products</li>
+        </Link>
+        <Link href="/about">
+          <li className="pl-6 text-white">About</li>
+        </Link>
+        <Link href="/contact">
+          <li className="pl-6 text-white">Contact</li>
+        </Link>
       </ul>
       <ul className=" flex">
-        {session.status === "unauthenticated" ? (
+        {session.status === "unauthenticated" ||
+        session.status === "loading" ? (
           <Link href="/login">
             <li className="text-white">Login</li>
           </Link>

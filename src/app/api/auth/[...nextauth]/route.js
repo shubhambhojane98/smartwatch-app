@@ -28,7 +28,6 @@ export const authOptions = {
           if (!passwordMatch) {
             return null;
           }
-
           return user;
         } catch (error) {
           console.log("Error", error);
